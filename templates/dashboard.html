@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Booking Buddy</title>
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <center><img width="90" src="http://i63.tinypic.com/20z7h55.png"/></center>
+    <center><h1><b>Booking Buddy</b></h1></center>
+    <div class="container">
+        <hgroup class="mb20">
+            <h2>Here is our Top Pick</h2>
+        </hgroup>
+        <hr>
+        <section class="col-xs-12 col-sm-6 col-md-12">
+            <article class="search-result row">
+                <div class="col-xs-12 col-sm-12 col-md-3">
+                    <a href="/more_info_1" title="See more" class="thumbnail"><img src="{{results.head(1)['image'].item()}}" alt="Lorem ipsum" /></a>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <ul class="meta-search" style="list-style: none;">
+                        <li style="margin-bottom: 5px; font-size: 12pt"><i class="fa fa-dollar"></i> <span>{{results.head(1)['price'].item()}}/night</span></li>
+                        <li style="margin-bottom: 5px; font-size: 12pt"><i class="fa fa-dollar"></i> <span>{{results.head(1)['price/person'].item()}}/person</span></li>
+                        <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-star"></i> <span>{{results.head(1)['stats approach'].item()}}</span></li>
+                        <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-comment"></i> <span>{{results.head(1)['total reviews'].item()}} reviews</span></li>
+                        <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-briefcase"></i> <span>{{results.head(1)['company'].item()}}</span></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+                    <h3><a href="/more_info_1" style='color: rgb(24, 25, 29)' title="See more">{{results.head(1)['location name'].item()}}</a></h3>
+                    <span class="plus"><a href="/more_info_1" style='color: rgb(15, 56, 221) ' title="See more"><i class="glyphicon glyphicon-plus"></i></a></span>
+                </div>
+                <span class="clearfix borda"></span>
+            </article>
+        </section>
+
+    </div>
+    <br>
+    <div class="container">
+        <hgroup class="mb20">
+            <h2>Here are 5 other great options</h2>
+        </hgroup>
+        <hr>
+        <section class="col-xs-12 col-sm-6 col-md-12">
+            <article class="search-result row" >
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <a href="/more_info_2" title="See more" class="thumbnail"><img src="{{results.head(2).tail(1)['image'].item()}}" alt="Lorem ipsum" /></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-2">
+                        <ul class="meta-search" style="list-style: none;">
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="fa fa-dollar"></i> <span>{{results.head(2).tail(1)['price'].item()}}/night</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="fa fa-dollar"></i> <span>{{results.head(2).tail(1)['price/person'].item()}}/person</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-star"></i> <span>{{results.head(2).tail(1)['stats approach'].item()}}</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-comment"></i> <span>{{results.head(2).tail(1)['total reviews'].item()}} reviews</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-briefcase"></i> <span>{{results.head(2).tail(1)['company'].item()}}</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+                        <h3><a href="/more_info_2" style='color: rgb(24, 25, 29)' title="See more">{{results.head(2).tail(1)['location name'].item()}}</a></h3>
+                        <span class="plus"><a href="/more_info_2" style='color: rgb(15, 56, 221) ' title="See more"><i class="glyphicon glyphicon-plus"></i></a></span>
+                    </div>
+                    <span class="clearfix borda"></span>
+            </article>
+
+            <article class="search-result row">
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <a href="/more_info_3" title="See more" class="thumbnail"><img src="{{results.head(3).tail(1)['image'].item()}}" alt="Lorem ipsum" /></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-2">
+                        <ul class="meta-search" style="list-style: none;">
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="fa fa-dollar"></i> <span>{{results.head(3).tail(1)['price'].item()}}/night</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="fa fa-dollar"></i> <span>{{results.head(3).tail(1)['price/person'].item()}}/person</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-star"></i> <span>{{results.head(3).tail(1)['stats approach'].item()}}</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-comment"></i> <span>{{results.head(3).tail(1)['total reviews'].item()}} reviews</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-briefcase"></i> <span>{{results.head(3).tail(1)['company'].item()}}</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+                        <h3><a href="/more_info_3" style='color: rgb(24, 25, 29)' title="See more">{{results.head(3).tail(1)['location name'].item()}}</a></h3>
+                        <span class="plus"><a href="/more_info_3" style='color: rgb(15, 56, 221) ' title="See more"><i class="glyphicon glyphicon-plus"></i></a></span>
+                    </div>
+                    <span class="clearfix borda"></span>
+            </article>
+
+            <article class="search-result row">
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <a href="/more_info_4" title="See more" class="thumbnail"><img src="{{results.head(4).tail(1)['image'].item()}}" alt="Lorem ipsum" /></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-2">
+                        <ul class="meta-search" style="list-style: none;">
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="fa fa-dollar"></i> <span>{{results.head(4).tail(1)['price'].item()}}/night</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="fa fa-dollar"></i> <span>{{results.head(4).tail(1)['price/person'].item()}}/person</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-star"></i> <span>{{results.head(4).tail(1)['stats approach'].item()}}</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-comment"></i> <span>{{results.head(4).tail(1)['total reviews'].item()}} reviews</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-briefcase"></i> <span>{{results.head(4).tail(1)['company'].item()}}</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+                        <h3><a href="/more_info_4" style='color: rgb(24, 25, 29)' title="See more">{{results.head(4).tail(1)['location name'].item()}}</a></h3>
+                        <span class="plus"><a href="/more_info_4" style='color: rgb(15, 56, 221) ' title="See more"><i class="glyphicon glyphicon-plus"></i></a></span>
+                    </div>
+                    <span class="clearfix borda"></span>
+            </article>
+
+            <article class="search-result row">
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <a href="/more_info_5" title="See more" class="thumbnail"><img src="{{results.head(5).tail(1)['image'].item()}}" alt="Lorem ipsum" /></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-2">
+                        <ul class="meta-search" style="list-style: none;">
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="fa fa-dollar"></i> <span>{{results.head(5).tail(1)['price'].item()}}/night</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="fa fa-dollar"></i> <span>{{results.head(5).tail(1)['price/person'].item()}}/person</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-star"></i> <span>{{results.head(5).tail(1)['stats approach'].item()}}</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-comment"></i> <span>{{results.head(5).tail(1)['total reviews'].item()}} reviews</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-briefcase"></i> <span>{{results.head(5).tail(1)['company'].item()}}</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+                        <h3><a href="/more_info_5" style='color: rgb(24, 25, 29)' title="See more">{{results.head(5).tail(1)['location name'].item()}}</a></h3>
+                        <span class="plus"><a href="/more_info_5" style='color: rgb(15, 56, 221) ' title="See more"><i class="glyphicon glyphicon-plus"></i></a></span>
+                    </div>
+                    <span class="clearfix borda"></span>
+            </article>
+
+            <article class="search-result row">
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <a href="/more_info_6" title="See more" class="thumbnail"><img src="{{results.tail(1)['image'].item()}}" alt="Lorem ipsum" /></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-2">
+                        <ul class="meta-search" style="list-style: none;">
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="fa fa-dollar"></i> <span>{{results.tail(1)['price'].item()}}/night</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="fa fa-dollar"></i> <span>{{results.tail(1)['price/person'].item()}}/person</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-star"></i> <span>{{results.tail(1)['stats approach'].item()}}</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-comment"></i> <span>{{results.tail(1)['total reviews'].item()}} reviews</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-briefcase"></i> <span>{{results.tail(1)['company'].item()}}</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+                        <h3><a href="/more_info_6" style='color: rgb(24, 25, 29)' title="See more">{{results.tail(1)['location name'].item()}}</a></h3>
+                        <span class="plus"><a href="/more_info_6" style='color: rgb(15, 56, 221) ' title="See more"><i class="glyphicon glyphicon-plus"></i></a></span>
+                    </div>
+                    <span class="clearfix borda"></span>
+            </article>
+        </section>
+    </div>
+    <br>
+    <center><h2>Analytics</h2></center>
+    <div style='text-align: center;'>
+            <img src={{ url_for('static', filename=image1) }} width="500" height="333">
+            <img src={{ url_for('static', filename=image2) }} width="500" height="333">
+    </div>
+    <div style='text-align: center;'>
+            <img src={{ url_for('static', filename=image3) }} width="500" height="333">
+            <img src={{ url_for('static', filename=image4) }} width="500" height="333">
+    </div>
+    <br>
+
+    {{table | safe}}
+
+</body>
+</html>

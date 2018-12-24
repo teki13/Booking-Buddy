@@ -1,0 +1,70 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>More Info</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  </head>
+
+  <body>
+  <br>
+  <center><img width="90" src="http://i63.tinypic.com/20z7h55.png"/></center>
+  <center><h1><b>Booking Buddy</b></h1></center>
+
+  <br>
+  <br>
+  <br>
+  <br>
+    <div class="container">
+        <div class="card">
+            <div class="container-fliud">
+                <div class="wrapper row">
+                        <div class="preview col-md-6">
+
+                        <div class="preview-pic tab-content">
+                        <div class="tab-pane active" id="pic-1"><img height="333" width="500" src="{{results.head(1)['image'].item()}}"></div>
+                        </div>
+                        <ul class="preview-thumbnail nav nav-tabs">
+                        </ul>
+
+                    </div>
+                    <div class="details col-md-6">
+                        <h3><a style='color: rgb(24, 25, 29)' title="See more">{{results.head(1)['location name'].item()}}</a></h3>
+                        <br>
+
+
+                        <ul class="meta-search" style="list-style: none;">
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="fa fa-dollar"></i> <span>{{results.head(1)['price'].item()}}/night</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="fa fa-dollar"></i> <span>{{results.head(1)['price/person'].item()}}/person</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-star"></i> <span>{{results.head(1)['stats approach'].item()}}</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-comment"></i> <span>{{results.head(1)['total reviews'].item()}} reviews</span></li>
+                            <li style="margin-bottom: 5px; font-size: 12pt"><i class="glyphicon glyphicon-briefcase"></i> <span>{{results.head(1)['company'].item()}}</span></li>
+                        </ul>
+
+
+
+                  <div class="action">
+              <br>
+              <a class="add-to-cart btn btn-default" class="button" href="{{results.head(1)['listing url'].item()}}">Book Now!</a>
+                            <a class="like btn btn-default" class="button" href="/map_1"><span class="fa fa-map-marker"></span></a>
+                            <!--<button class="like btn btn-default" type="button"><span class="fa fa-map-marker"></span></button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

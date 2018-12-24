@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+        
+<head>
+    <title>Booking Buddy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+        
+    <center><img width="90" src="http://i63.tinypic.com/20z7h55.png"/></center>
+    <!-- <a href="http://tinypic.com?ref=20z7h55" target="_blank"><img src="http://i63.tinypic.com/20z7h55.png" border="0" alt="Image and video hosting by TinyPic"></a> -->
+    <center><h1><b>Booking Buddy</b></h1></center>
+    <hr>
+    <br>
+    <center><form action="/dashboard" method="POST">
+    <div style='text-align: center;'>
+        <div>
+            <h4>Input your price range below</h4>
+        </div>
+        <br>
+        <div style='display: inline-block; vertical-align: top;'>
+            <input style="width: 160px; text-align:center;" type="number" name = "input_min" placeholder="Minimum price" style="text-align: center" min={{min_price}} max={{max_price}} required/></br>
+        </div>
+        <div style='display: inline-block; vertical-align: top;'>
+            <input style="width: 160px; text-align:center" type="number" name = "input_max" placeholder="Maximum price" style="text-align: center" min={{min_price}} max={{max_price}} required/></br>
+        </div>
+        <div>
+            <br>
+            <input type="submit" value = Submit href="/dashboard" />
+        </div>
+    </div>
+    <div style='text-align: center;'>
+        <div style='display: inline-block; vertical-align: top;'>
+                <h3>Minimum price: {{min_price}}</h3>
+                <h3>Average price: {{ave_price}}</h3>
+                <h3>Maximum price: {{max_price}}</h3>
+        </div>        
+    </div>
+    <div style='text-align: center;'>
+        <img src={{ url_for('static', filename=image) }} width="500" height="333">
+    </div>
+    </form></center>
+</body>
+</html>

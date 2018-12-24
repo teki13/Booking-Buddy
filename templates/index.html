@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+        
+<head>
+    <title>Booking Buddy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+        <style>
+body {
+        background-image: url("http://i63.tinypic.com/hvs75i.jpg");
+
+} </style>
+
+</head>
+<body>
+    <center><img width="90" src="http://i63.tinypic.com/20z7h55.png"/></center>
+    <!-- <a href="http://tinypic.com?ref=20z7h55" target="_blank"><img src="http://i63.tinypic.com/20z7h55.png" border="0" alt="Image and video hosting by TinyPic"></a> -->
+    <center><h1><b>Booking Buddy</b></h1></center>
+    <hr>
+    <br><br>
+    
+    <center><form action="/price" method="POST">
+    <div style='text-align: center;'>
+        <div>
+            <h4>Input the details of your trip below</h4>
+            <input style="text-align:center;"type="text" size = '64.5' name = "destination city" placeholder="Destination City" style="text-align: center" required/> </br>
+        </div>
+        <br>
+        <div style='display: inline-block; vertical-align: top;'>
+            <input style="width: 160px; text-align:center;" name = "check-in month" placeholder="Check-in Month" style="text-align: center" type="number" max="12" min="1" required/></br>
+            <input style="width: 160px; text-align:center;" name = "check-out month" placeholder="Check-out Month" style="text-align: center" type="number" max="12" min="1" required/></br>
+            <input style="width: 160px; text-align:center;" name = "number rooms" placeholder="Number of Rooms" style="text-align: center" type="number" max="6" min="1" required/></br>
+        </div>
+        <div style='display: inline-block; vertical-align: top;'>
+            <input style="width: 160px; text-align:center;" name = "check-in day" placeholder="Check-in Day" style="text-align: center" type="number" max="31" min="1" required/></br>
+            <input style="width: 160px; text-align:center;" name = "check-out day" placeholder="Check-out Day" style="text-align: center" type="number" max="31" min="1" required/></br>
+            <input style="width: 160px; text-align:center;" name = "adults"  placeholder="Number of Guests" style="text-align: center" type="number" max="12" min="1" required/></br>
+        </div>
+        <div style='display: inline-block; vertical-align: top;'>
+            <input style="width: 160px; text-align:center;" name = "check-in year" placeholder="Check-in Year" style="text-align: center" type="number" max="2019" min="2018" required/></br>
+            <input style="width: 160px; text-align:center;" name = "check-out year" placeholder="Check-out Year" style="text-align: center" type="number" max="2019" min="2018" required/></br>
+        </div>
+        <div>
+            <br>
+            <input type="submit" value = Submit href="/price" />
+        </div>
+    </div>
+    </form></center>
+</body>
+</html>
