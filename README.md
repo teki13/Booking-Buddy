@@ -22,6 +22,8 @@ Lastly, in order to run the code simply go to the directory where the new_webser
 python3 new_webserver6.py
 ```
 
+The code is currently live and running at: http://35.236.197.140:5000/ 
+
 ## Contributors 
 
 * **Teona Ristova**
